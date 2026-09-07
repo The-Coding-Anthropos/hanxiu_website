@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理后台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="admin">
+    <header>
+      <div class="container nav">
+        <a class="brand" href="/">汉绣非遗工作室</a>
+        <nav class="nav-links">
+          <a href="/">返回前台</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <h2>后台管理（新手友好版）</h2>
+        <p class="meta">不需要代码操作，按模块点选即可完成内容更新、留言跟进和资料维护。</p>
+        <form id="adminLoginForm">
+          <label>管理员 Token
+            <input name="token" required placeholder="默认 change-me，建议通过环境变量修改" />
+          </label>
+          <button class="btn btn-primary" type="submit">登录后台</button>
+          <p id="adminMsg" class="msg"></p>
+        </form>
+      </section>
+
+      <section class="section" id="adminPanel" style="display: none;">
+        <div id="adminTabs" class="admin-tabs">
+          <button class="admin-tab active" data-tab="overview" type="button">概览</button>
+          <button class="admin-tab" data-tab="base" type="button">基础信息</button>
+          <button class="admin-tab" data-tab="inquiries" type="button">留言跟进</button>
+          <button class="admin-tab" data-tab="works" type="button">作品管理</button>
+          <button class="admin-tab" data-tab="products" type="button">商城物品</button>
+          <button class="admin-tab" data-tab="knowledge" type="button">知识库管理</button>
+        </div>
+
+        <section class="section tab-pane active" data-pane="overview">
+          <h3>数据概览</h3>
+          <div id="statCards" class="card-grid"></div>
+        </section>
+
+        <section class="section tab-pane" data-pane="base">
+          <div class="admin-layout">
+            <article class="card">
+              <div class="card-body">
+                <h3>首页文案快捷编辑</h3>
+                <label>首页主标题
+                  <input id="homeBannerTitle" />
+                </label>
+                <label>首页副标题
+                  <input id="homeBannerSubtitle" />
+                </label>
+                <label>创作故事摘要
+                  <textarea id="homeStory"></textarea>
+                </label>
+                <button class="btn btn-primary" id="saveHomeBtn" type="button">保存首页文案</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-body">
+                <h3>关于我快捷编辑</h3>
+                <label>名称
+                  <input id="aboutName" />
+                </label>
+                <label>个人简介
+                  <textarea id="aboutBio"></textarea>
+                </label>
+                <label>非遗传承介绍
+                  <textarea id="aboutInheritance"></textarea>
+                </label>
+                <label>工作室地址
+                  <input id="aboutStudioAddress" />
+                </label>
+                <label>师资（每行一个）
+                  <textarea id="aboutTeachers"></textarea>
+                </label>
+                <button class="btn btn-primary" id="saveAboutBtn" type="button">保存关于我</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section tab-pane" data-pane="inquiries">
+          <h3>留言预约跟进</h3>
+          <p class="meta">把留言状态从“新留言”更新为“跟进中”或“已完成”。</p>
+          <div id="inquiryList" class="card-grid"></div>
+        </section>
+
+        <section class="section tab-pane" data-pane="works">
+          <h3>作品集管理（新增 / 编辑 / 删除）</h3>
+          <p class="meta">先点左侧“编辑该作品”，右侧表单会自动填充。修改后点“保存作品”。</p>
+          <div class="admin-layout">
+            <article class="card">
+              <div class="card-body">
+                <div id="workList" class="admin-mini-list"></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-body">
+                <h4 id="workEditorTitle">新增作品</h4>
+                <input type="hidden" id="workId" />
+                <label>标题
+                  <input id="workTitle" />
+                </label>
+                <label>分类
+                  <select id="workCategory">
+                    <option value="花鸟">花鸟</option>
+                    <option value="人物">人物</option>
+                    <option value="屏风">屏风</option>
+                    <option value="挂画">挂画</option>
+                    <option value="文创衍生品">文创衍生品</option>
+                  </select>
+                </label>
+                <label>尺寸
+                  <input id="workSize" />
+                </label>
+                <label>材质
+                  <input id="workMaterial" />
+                </label>
+                <label>收藏价值
+                  <input id="workValue" />
+                </label>
+                <label>封面图链接
+                  <input id="workCover" />
+                </label>
+                <label>上传封面图
+                  <input id="workCoverFile" type="file" accept="image/*" />
+                </label>
+                <button class="btn btn-outline" id="uploadWorkCoverBtn" type="button">上传并填入封面图</button>
+                <label>细节图链接（每行一张）
+                  <textarea id="workDetails"></textarea>
+                </label>
+                <label>上传细节图（可重复上传多次）
+                  <input id="workDetailFile" type="file" accept="image/*" />
+                </label>
+                <button class="btn btn-outline" id="uploadWorkDetailBtn" type="button">上传并追加细节图</button>
+                <label>视频链接
+                  <input id="workVideo" />
+                </label>
+                <label>上传视频
+                  <input id="workVideoFile" type="file" accept="video/*" />
+                </label>
+                <button class="btn btn-outline" id="uploadWorkVideoBtn" type="button">上传并填入视频地址</button>
+                <label>作品简介
+                  <textarea id="workDescription"></textarea>
+                </label>
+                <div class="cta-row">
+                  <button class="btn btn-primary" id="saveWorkBtn" type="button">保存作品</button>
+                  <button class="btn btn-outline" id="newWorkBtn" type="button">新建空白</button>
+                  <button class="btn btn-outline" id="deleteWorkBtn" type="button">删除当前</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section tab-pane" data-pane="products">
+          <h3>商城物品管理（新增 / 编辑 / 删除）</h3>
+          <p class="meta">规格用“/”分隔，例如：40x60cm/60x90cm。</p>
+          <div class="admin-layout">
+            <article class="card">
+              <div class="card-body">
+                <div id="productList" class="admin-mini-list"></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-body">
+                <h4 id="productEditorTitle">新增物品</h4>
+                <input type="hidden" id="productId" />
+                <label>名称
+                  <input id="productName" />
+                </label>
+                <label>分类
+                  <select id="productCategory">
+                    <option value="成品挂画/摆件">成品挂画/摆件</option>
+                    <option value="手工定制礼品">手工定制礼品</option>
+                    <option value="汉绣工具包">汉绣工具包</option>
+                  </select>
+                </label>
+                <label>规格（/分隔）
+                  <input id="productSpecs" />
+                </label>
+                <label>价格（元）
+                  <input id="productPrice" type="number" min="0" step="1" />
+                </label>
+                <label>运费（元）
+                  <input id="productShippingFee" type="number" min="0" step="1" />
+                </label>
+                <label>图片链接
+                  <input id="productImage" />
+                </label>
+                <label>上传商品图
+                  <input id="productImageFile" type="file" accept="image/*" />
+                </label>
+                <button class="btn btn-outline" id="uploadProductImageBtn" type="button">上传并填入商品图</button>
+                <label>细节图链接（每行一张）
+                  <textarea id="productDetails"></textarea>
+                </label>
+                <label>上传商品细节图（可重复上传多次）
+                  <input id="productDetailFile" type="file" accept="image/*" />
+                </label>
+                <button class="btn btn-outline" id="uploadProductDetailBtn" type="button">上传并追加细节图</button>
+                <div class="cta-row">
+                  <button class="btn btn-primary" id="saveProductBtn" type="button">保存物品</button>
+                  <button class="btn btn-outline" id="newProductBtn" type="button">新建空白</button>
+                  <button class="btn btn-outline" id="deleteProductBtn" type="button">删除当前</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section tab-pane" data-pane="knowledge">
+          <h3>汉绣知识库管理（新增 / 编辑 / 删除）</h3>
+          <p class="meta">标签用“/”分隔，例如：针法教程/新手。摘要用于列表预览，正文用于详情页完整展示。</p>
+          <div class="admin-layout">
+            <article class="card">
+              <div class="card-body">
+                <div id="knowledgeList" class="admin-mini-list"></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-body">
+                <h4 id="knowledgeEditorTitle">新增文章</h4>
+                <input type="hidden" id="knowledgeId" />
+                <label>标题
+                  <input id="knowledgeTitle" />
+                </label>
+                <label>标签（/分隔）
+                  <input id="knowledgeTags" />
+                </label>
+                <label>摘要
+                  <textarea id="knowledgeSummary"></textarea>
+                </label>
+                <label>正文（详情页完整内容，支持换行）
+                  <textarea id="knowledgeContent"></textarea>
+                </label>
+                <div class="cta-row">
+                  <button class="btn btn-primary" id="saveKnowledgeBtn" type="button">保存文章</button>
+                  <button class="btn btn-outline" id="newKnowledgeBtn" type="button">新建空白</button>
+                  <button class="btn btn-outline" id="deleteKnowledgeBtn" type="button">删除当前</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

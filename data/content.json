@@ -1,0 +1,200 @@
+{
+  "content": {
+    "home": {
+      "bannerTitle": "针间山河・汉绣新生",
+      "bannerSubtitle": "以千年楚绣技艺，绣出东方美学与当代生活",
+      "featuredWorkIds": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "story": "erereerere"
+    },
+    "works": [
+      {
+        "id": "w1",
+        "title": "瑞鹤朝阳",
+        "category": "花鸟",
+        "size": "120cm x 80cm",
+        "material": "真丝绣布 / 苏绣线 / 金线",
+        "value": "馆藏级",
+        "cover": "/uploads/1788508404981_2a411ff5.jpg",
+        "detail": "https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=1200&q=80",
+        "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "以鹤喻吉，以朝阳寓新。针法层叠，丝线光泽细腻。"
+      },
+      {
+        "id": "w2",
+        "title": "楚韵仕女",
+        "category": "人物",
+        "size": "100cm x 70cm",
+        "material": "双宫真丝 / 彩绣线",
+        "value": "收藏级",
+        "cover": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1200&q=80",
+        "detail": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80",
+        "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "以汉代衣纹为灵感，重现楚地风华。"
+      },
+      {
+        "id": "w3",
+        "title": "云纹山水屏",
+        "category": "屏风",
+        "size": "180cm x 200cm",
+        "material": "绢本 / 渐变绣线",
+        "value": "高端定制",
+        "cover": "https://images.unsplash.com/photo-1618221710640-9c54c43d8a31?auto=format&fit=crop&w=1200&q=80",
+        "detail": "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&w=1200&q=80",
+        "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "山水入绣，云纹流动，适配新中式空间。"
+      },
+      {
+        "id": "w4",
+        "title": "梅兰竹菊四条屏",
+        "category": "挂画",
+        "size": "40cm x 120cm (x4)",
+        "material": "桑蚕丝 / 棉麻底",
+        "value": "文化礼赠",
+        "cover": "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?auto=format&fit=crop&w=1200&q=80",
+        "detail": "https://images.unsplash.com/photo-1616627452787-4fae70fbea72?auto=format&fit=crop&w=1200&q=80",
+        "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "四君子题材，适合居所与书房空间陈设。"
+      },
+      {
+        "id": "w5",
+        "title": "凤纹香囊挂饰",
+        "category": "文创衍生品",
+        "size": "10cm x 16cm",
+        "material": "绣缎 / 流苏 / 香材",
+        "value": "大众收藏",
+        "cover": "https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1200&q=80",
+        "detail": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+        "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "将传统纹样融入日常佩戴与空间香氛。"
+      }
+    ],
+    "products": [
+      {
+        "id": "p1",
+        "name": "汉绣成品挂画・花开富贵",
+        "category": "成品挂画/摆件",
+        "specs": [
+          "40x60cm",
+          "60x90cm"
+        ],
+        "price": 1280,
+        "shippingFee": 18,
+        "image": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "p2",
+        "name": "手工定制礼品・姓名题字团扇",
+        "category": "手工定制礼品",
+        "specs": [
+          "标准款",
+          "礼盒款"
+        ],
+        "price": 399,
+        "shippingFee": 12,
+        "image": "https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "p3",
+        "name": "汉绣工具包（新手全套）",
+        "category": "汉绣工具包",
+        "specs": [
+          "基础包",
+          "进阶包"
+        ],
+        "price": 189,
+        "shippingFee": 10,
+        "image": "https://images.unsplash.com/photo-1459908676235-d5f02a50184b?auto=format&fit=crop&w=1200&q=80"
+      }
+    ],
+    "knowledge": [
+      {
+        "id": "k1",
+        "title": "汉绣基础针法 5 步入门",
+        "tags": [
+          "针法教程",
+          "新手"
+        ],
+        "summary": "从穿针到落针，拆解平针、套针、抢针的练习路径。",
+        "content": "第一步先准备绣绷、绣针和丝线，线长建议控制在 35-45 厘米，避免打结。\n第二步练习平针，重点是针脚等长和走向一致，每天重复 15 分钟打基础。\n第三步练习套针，让颜色过渡更柔和，适合花瓣和云纹的层次表现。\n第四步练习抢针，用短针脚做弧线收边，边缘会更干净。\n第五步组合三种针法完成小样，拍照对比针脚均匀度，再进入下一阶段创作。"
+      },
+      {
+        "id": "k2",
+        "title": "楚文化纹样的吉祥寓意",
+        "tags": [
+          "历史文化",
+          "纹样寓意"
+        ],
+        "summary": "龙凤、云纹、瑞鹤等经典图案如何用于家居与礼赠。",
+        "content": "龙凤纹常用于婚庆与家族礼仪，象征和合与兴旺，适合作为礼赠主题。\n云纹在楚文化中代表流动与生机，常用于屏风或墙面挂画，视觉上更轻盈。\n瑞鹤纹寓意长寿与高洁，适合书房、会客空间等需要文化气质的场景。\n选纹样时建议先确认使用空间，再决定主图案与配色，避免符号过多导致主题分散。"
+      },
+      {
+        "id": "k3",
+        "title": "如何让绣面更有层次感",
+        "tags": [
+          "创作技巧",
+          "配色"
+        ],
+        "summary": "通过丝线方向、明暗递进与针脚密度提升立体感。",
+        "content": "同一色系至少准备 3 个明度层级，先铺中间色，再逐步叠加高光和暗部。\n针脚方向要贴合物体结构，例如花瓣沿外扩方向、衣纹沿折线方向。\n前景可适当提高针脚密度，背景适当留空，形成自然的景深关系。\n收尾时用细针做边缘过渡，避免硬边，整体会更有体积感与光泽感。"
+      },
+      {
+        "id": "k_1dd1e0_1788509226689",
+        "title": "11",
+        "tags": [
+          "22"
+        ],
+        "summary": "333",
+        "content": "333"
+      },
+      {
+        "id": "k_c7b1f0_1788509809530",
+        "title": "?!",
+        "tags": [
+          "www"
+        ],
+        "summary": "wew",
+        "content": "wew"
+      }
+    ],
+    "about": {
+      "name": "111",
+      "bio": "222",
+      "inheritance": "22222",
+      "studioAddress": "333",
+      "teachers": [
+        "555"
+      ]
+    },
+    "stories": [
+      {
+        "id": "s1",
+        "title": "一幅《瑞鹤朝阳》的 90 天",
+        "summary": "从草图到收针，记录一件大作背后的工序与心法。"
+      }
+    ]
+  },
+  "operations": {
+    "inquiries": [
+      {
+        "id": "inq_14658242_1788510083134",
+        "name": "Yumeng Wang",
+        "phone": "18171388101",
+        "message": "www",
+        "type": "作品定制",
+        "createdAt": "2026-09-04T08:21:23.134Z",
+        "status": "done"
+      }
+    ],
+    "subscribers": [
+      {
+        "id": "sub_bc0bd032_1788509028592",
+        "email": "wangyumeng808@foxmail.com",
+        "createdAt": "2026-09-04T08:03:48.592Z"
+      }
+    ]
+  }
+}

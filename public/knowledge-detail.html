@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>知识库文章详情</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="knowledge-detail">
+    <header>
+      <div class="container nav">
+        <a class="brand" href="/">汉绣非遗工作室</a>
+        <nav class="nav-links">
+          <a href="/">首页</a>
+          <a href="/gallery.html">作品集</a>
+          <a href="/shop.html">商城店铺</a>
+          <a class="active" href="/knowledge.html">汉绣知识库</a>
+          <a href="/about.html">关于我</a>
+          <a href="/booking.html">留言预约</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <a class="btn btn-outline" href="/knowledge.html">返回知识库列表</a>
+      </section>
+
+      <section class="section">
+        <article class="card knowledge-article">
+          <div class="card-body">
+            <h1 id="knowledgeTitle">文章加载中...</h1>
+            <div id="knowledgeTags" class="tags"></div>
+            <p id="knowledgeSummary" class="meta"></p>
+            <div id="knowledgeContent" class="knowledge-content"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 汉绣非遗工作室 | <a href="/admin.html">管理后台入口</a></div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
