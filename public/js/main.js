@@ -177,11 +177,13 @@ function renderHome(data) {
 
   const heroTitle = document.querySelector("#heroTitle");
   const heroSubtitle = document.querySelector("#heroSubtitle");
+  const heroImage = document.querySelector("#heroImage");
   const featuredWorks = document.querySelector("#featuredWorks");
   const story = document.querySelector("#storyText");
 
   if (heroTitle) heroTitle.textContent = home.bannerTitle;
   if (heroSubtitle) heroSubtitle.textContent = home.bannerSubtitle;
+  if (heroImage && home.bannerImage) heroImage.src = home.bannerImage;
   if (featuredWorks) featuredWorks.innerHTML = works.map((item) => workCard(item, false)).join("");
   if (story) story.textContent = home.story;
 }

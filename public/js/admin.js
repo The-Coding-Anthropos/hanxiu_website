@@ -112,6 +112,7 @@ function renderStats(data) {
 function fillQuickEditors(content) {
   el("#homeBannerTitle").value = content.home.bannerTitle || "";
   el("#homeBannerSubtitle").value = content.home.bannerSubtitle || "";
+  el("#homeBannerImage").value = content.home.bannerImage || "";
   el("#homeStory").value = content.home.story || "";
 
   el("#aboutName").value = content.about.name || "";
@@ -206,6 +207,7 @@ el("#saveHomeBtn").addEventListener("click", async () => {
     ...dashboardData.content.home,
     bannerTitle: el("#homeBannerTitle").value,
     bannerSubtitle: el("#homeBannerSubtitle").value,
+    bannerImage: el("#homeBannerImage").value.trim(),
     story: el("#homeStory").value
   };
 
@@ -218,6 +220,15 @@ el("#saveHomeBtn").addEventListener("click", async () => {
     alert("首页文案已保存");
   } catch (error) {
     alert(`保存失败：${error.message}`);
+  }
+});
+
+el("#uploadHomeBannerImageBtn").addEventListener("click", async () => {
+  try {
+    await uploadFileAndFill("#homeBannerImageFile", "#homeBannerImage", "首页主视觉图片");
+    alert("首页图片上传成功");
+  } catch (error) {
+    alert(`上传失败：${error.message}`);
   }
 });
 
